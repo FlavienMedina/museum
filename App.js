@@ -1,6 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+xlsxj = require("xlsx-to-json");
+ xlsxj({
+   input: "museum.xlsx",
+   output: "output.json"
+ }, function(err, result) {
+   if(err) {
+     console.error(err);
+   }else {
+     console.log(result);
+   }
+ });
 export default class App extends React.Component {
   render() {
     return (
